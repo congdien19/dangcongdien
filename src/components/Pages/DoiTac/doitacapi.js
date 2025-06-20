@@ -47,7 +47,7 @@ const Doitacapi = () => {
             type="text"
             value={domain}
             onChange={(e) => setDomain(e.target.value)}
-            placeholder="ví dụ: thatim.vn"
+            placeholder="ví dụ: congdien.pro"
           />
         </div>
 
