@@ -1,44 +1,33 @@
+/* ...existing code... */
+
 .sidebar-menu {
-  width: 100%;
-  padding: 0 12px 12px 12px;
-  font-family: sans-serif;
-  margin-top: 50px;
-  max-height: calc(100vh - 50px);
-  overflow-y: auto;
-  overflow-x: hidden;
-  box-sizing: border-box;
-  scrollbar-width: thin;
-  scrollbar-color: #b0b0b0 #e0e0e0;
-  scroll-behavior: smooth;
-  -webkit-overflow-scrolling: touch;
-  touch-action: pan-y;
-  background-color: #fff;
-  transition: transform 0.3s ease-in-out;
+  display: block;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 240px;
+  height: 100vh;
+  background: #fff;
+  z-index: 100;
+  box-shadow: 2px 0 12px rgba(0,0,0,0.06);
+  transition: transform 0.2s;
+  overflow-y: visible; /* Bỏ thanh trượt dọc */
 }
 
-/* UL bên trong có thể cuộn nếu tràn */
+/* UL bên trong không còn cuộn, hiển thị hết menu */
 .sidebar-menu ul {
   list-style: none;
   padding-left: 0;
-  max-height: 100%;
-  overflow-y: auto;
-  -webkit-overflow-scrolling: touch;
-  touch-action: pan-y;
+  max-height: none;
+  overflow-y: visible;
+  -webkit-overflow-scrolling: auto;
+  touch-action: auto;
 }
 
-.sidebar-menu::-webkit-scrollbar-track {
-  background: #e0e0e0;
-  border-radius: 10px;
-}
-
-.sidebar-menu::-webkit-scrollbar-thumb {
-  background: #b0b0b0;
-  border-radius: 10px;
-  border: 2px solid #e0e0e0;
-}
-
-.sidebar-menu::-webkit-scrollbar-thumb:hover {
-  background: #888;
+/* Ẩn thanh cuộn nếu có */
+.sidebar-menu::-webkit-scrollbar,
+.sidebar-menu ul::-webkit-scrollbar {
+  display: none;
 }
 
 .menu-section {
@@ -60,7 +49,7 @@
   display: flex;
   align-items: center;
   min-width: 0;
-  overflow-x: auto;
+  overflow-x: visible;
   white-space: nowrap;
 }
 
@@ -131,7 +120,7 @@
     width: 100vw;
     height: calc(100vh - 55px);
     z-index: 999;
-    overflow-y: auto;
+    overflow-y: visible; /* Bỏ thanh trượt dọc */
     padding-bottom: 60px;
     margin-top: 0;
     background: #fff;
@@ -143,3 +132,19 @@
   }
 }
 
+/* Existing styles... */
+
+h6 {
+  text-align: center;
+  margin: 0;
+  padding: 8px 0;
+}
+
+/* Hoặc nếu chỉ áp dụng cho menu */
+.menu h6,
+.sidebar-menu h6,
+.header-menu h6 {
+  text-align: center;
+  margin: 0;
+  padding: 8px 0;
+}
