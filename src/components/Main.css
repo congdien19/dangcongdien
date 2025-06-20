@@ -1,0 +1,28 @@
+.page-title {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* hoặc center nếu muốn giữa */
+  gap: 6px;
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 12px;
+  margin-top: 72px; /* Đẩy tiêu đề xuống dưới header ngang, chỉnh lại px cho đúng chiều cao header */
+  background: #000000; /* Màu nền ngang nhẹ */
+  padding: 16px 24px;  /* Tạo vùng nền rõ ràng */
+  border-radius: 8px;  /* Bo góc nhẹ cho đẹp */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.03); /* Đổ bóng nhẹ */
+}
+.page-title {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* hoặc center nếu muốn giữa */
+  gap: 6px;
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 12px;
+  margin-top: 72px; /* Đẩy tiêu đề xuống dưới header ngang, chỉnh lại px cho đúng chiều cao header */
+  background: #f5f7fa; /* Màu nền ngang nhẹ */
+  padding: 16px 24px;  /* Tạo vùng nền rõ ràng */
+  border-radius: 8px;  /* Bo góc nhẹ cho đẹp */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.03); /* Đổ bóng nhẹ */
+}

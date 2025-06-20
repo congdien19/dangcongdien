@@ -1,0 +1,24 @@
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: #f0f0f0;
+  font-size: 14px;
+  color: #333;
+  border-top: 1px solid #ffefef;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.footer-left a {
+  text-decoration: none;
+  color: #007bff;
+}
+
+.footer-left a:hover {
+  text-decoration: underline;
+}
+
+.footer-right {
+  font-weight: 500;
+}

@@ -1,0 +1,145 @@
+.sidebar-menu {
+  width: 100%;
+  padding: 0 12px 12px 12px;
+  font-family: sans-serif;
+  margin-top: 50px;
+  max-height: calc(100vh - 50px);
+  overflow-y: auto;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  scrollbar-width: thin;
+  scrollbar-color: #b0b0b0 #e0e0e0;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  touch-action: pan-y;
+  background-color: #fff;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* UL bên trong có thể cuộn nếu tràn */
+.sidebar-menu ul {
+  list-style: none;
+  padding-left: 0;
+  max-height: 100%;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  touch-action: pan-y;
+}
+
+.sidebar-menu::-webkit-scrollbar-track {
+  background: #e0e0e0;
+  border-radius: 10px;
+}
+
+.sidebar-menu::-webkit-scrollbar-thumb {
+  background: #b0b0b0;
+  border-radius: 10px;
+  border: 2px solid #e0e0e0;
+}
+
+.sidebar-menu::-webkit-scrollbar-thumb:hover {
+  background: #888;
+}
+
+.menu-section {
+  margin-bottom: 20px;
+}
+
+.menu-heading {
+  font-size: 14px;
+  font-weight: bold;
+  color: #666;
+  margin: 8px 0;
+}
+
+.sidebar-menu li {
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  min-width: 0;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.sidebar-menu li.active {
+  background-color: #e6f7ff;
+  color: #1976d2;
+  font-weight: 500;
+}
+
+.sidebar-menu li.hovered {
+  background-color: #f0f0f0;
+}
+
+.menu-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  object-fit: contain;
+}
+
+/* Nút hamburger trên mobile */
+.sidebar-hamburger-mobile {
+  display: none;
+  padding: 0;
+  background: transparent;
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 1101;
+}
+
+.hamburger-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  color: #222;
+  box-shadow: none;
+  outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hamburger-btn:focus,
+.hamburger-btn:active {
+  background: none;
+  outline: none;
+  box-shadow: none;
+}
+
+/* Responsive cho mobile */
+@media (max-width: 768px) {
+  .sidebar-hamburger-mobile {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background: transparent;
+    width: auto;
+    height: auto;
+  }
+
+  .sidebar-menu {
+    display: none;
+    position: fixed;
+    top: 55px;
+    left: 0;
+    width: 100vw;
+    height: calc(100vh - 55px);
+    z-index: 999;
+    overflow-y: auto;
+    padding-bottom: 60px;
+    margin-top: 0;
+    background: #fff;
+    box-shadow: 2px 0 8px rgba(0,0,0,0.08);
+  }
+
+  .sidebar-menu.show-mobile {
+    display: block;
+  }
+}
+

@@ -1,0 +1,30 @@
+/* ...existing code... */
+
+.home-container {
+  padding-top: 72px;
+  padding-left: 16px;
+  padding-right: 16px;
+  box-sizing: border-box;
+}
+
+.home-flex-row {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+  padding: 20px 0;
+}
+
+/* Responsive cho mobile */
+@media (max-width: 600px) {
+  .home-container {
+    padding-top: 56px;
+    padding-left: 6px;
+    padding-right: 6px;
+  }
+
+  .home-flex-row {
+    flex-direction: column;
+    gap: 8px;
+    padding: 8px 0;
+  }
+}

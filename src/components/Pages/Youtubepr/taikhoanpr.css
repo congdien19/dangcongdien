@@ -1,0 +1,186 @@
+/* Vùng chứa chính */
+.yt-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 30px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fff;
+}
+
+/* Cột trái chứa banner */
+.yt-left {
+  flex: 1;
+  min-width: 320px;
+}
+
+.yt-banner {
+  width: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Cột phải chứa nội dung */
+.yt-right {
+  flex: 1;
+  min-width: 320px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Badge "Tài khoản Premium" */
+.yt-badge {
+  background-color: #28a745;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+  display: inline-block;
+  font-weight: 600;
+  width: fit-content;
+}
+
+/* Tiêu đề và mô tả */
+.yt-right h2 {
+  margin: 0;
+  font-size: 24px;
+  color: #202124;
+}
+
+.yt-desc {
+  font-size: 15px;
+  color: #555;
+}
+
+/* Chip trạng thái "Còn hàng" */
+.yt-chip {
+  background-color: #e6f4ea;
+  color: #137333;
+  padding: 6px 12px;
+  border-radius: 16px;
+  display: inline-block;
+  font-size: 14px;
+  width: fit-content;
+  font-weight: 500;
+}
+
+/* Vùng chọn gói */
+.yt-plans {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+/* Mỗi gói */
+.yt-plan {
+  flex: 1;
+  min-width: 150px;
+  max-width: 180px;
+  border: 2px solid #ccc;
+  border-radius: 12px;
+  padding: 14px 12px;
+  background-color: #fdfdfd;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  text-align: center;
+}
+
+.yt-plan:hover {
+  border-color: #007bff;
+  background-color: #f0f8ff;
+}
+
+.yt-plan.active {
+  border-color: #007bff;
+  background-color: #e6f0ff;
+}
+
+.yt-plan strong {
+  font-size: 15px;
+  color: #202124;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.yt-plan p {
+  font-size: 13px;
+  color: #666;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.yt-discount {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: #e91e63;
+  color: #fff;
+  font-size: 11px;
+  padding: 3px 7px;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+/* Ô nhập Gmail */
+.yt-input {
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 12px;
+  font-size: 14px;
+  resize: none;
+  min-height: 60px;
+  transition: border-color 0.2s ease;
+}
+
+.yt-input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* Tổng tiền */
+.yt-total {
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.yt-total span {
+  color: #d32f2f;
+}
+
+/* Nút thanh toán */
+.yt-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: fit-content;
+}
+
+.yt-button:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .yt-container {
+    flex-direction: column;
+  }
+
+  .yt-plans {
+    flex-direction: column;
+  }
+
+  .yt-plan {
+    width: 100%;
+    max-width: none;
+  }
+}

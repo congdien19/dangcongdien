@@ -1,0 +1,31 @@
+.logo-container {
+    padding: 12px 0 8px 0;
+    text-align: center;
+    width: 100%;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: static;
+}
+
+.logo-container img {
+    max-width: 48px;
+    height: 48px;
+    border-radius: 100%;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+/* Mobile: logo nằm sát trái, gần với menu hamburger */
+@media (max-width: 900px) {
+    .logo-container {
+        justify-content: flex-start;
+        padding-left: 45px;
+        padding-top: 10px;
+        padding-bottom: 6px;
+    }
+    .logo-container img {
+        max-width: 40px;
+        height: 40px;
+    }
+}

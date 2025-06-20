@@ -1,0 +1,216 @@
+.dt-wrapper {
+  margin: 60px auto; /* Increased margin to push content away from the header */
+  display: flex;
+  gap: 30px;
+  font-family: 'Segoe UI', sans-serif;
+  padding: 0 20px; /* Added padding to prevent content from touching the screen edges */
+}
+
+.dt-left, .dt-right {
+  background: #fff;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+}
+
+.dt-left {
+  flex: 1.2;
+}
+
+.dt-right {
+  flex: 1;
+  background: #f9f9f9;
+}
+
+.dt-title {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 25px;
+  color: #2c3e50;
+}
+
+.dt-section {
+  margin-bottom: 22px;
+}
+
+.dt-section label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #444;
+}
+
+.dt-section input {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+.dt-inline {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.dt-inline input {
+  flex: 1;
+  margin-bottom: 0;
+}
+
+.dt-btn {
+  background: #3498db;
+  color: white;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 10px;
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: background 0.2s ease;
+}
+
+.dt-btn:hover {
+  background: #2980b9;
+}
+
+.dt-btn.primary {
+  background: #27ae60;
+}
+
+.dt-btn.primary:hover {
+  background: #1e8449;
+}
+
+.dt-table-wrap {
+  margin-top: 20px;
+  overflow-x: auto;
+}
+
+.dt-table-wrap table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.dt-table-wrap th,
+.dt-table-wrap td {
+  padding: 12px 16px;
+  border-bottom: 1px solid #eee;
+  text-align: left;
+  font-size: 14px;
+}
+
+.dt-right h3 {
+  font-size: 18px;
+  margin-bottom: 14px;
+  color: #333;
+}
+
+.dt-right p {
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #444;
+}
+
+.dt-right ul {
+  margin-left: 20px;
+  margin-bottom: 10px;
+}
+
+.dt-right code {
+  background: #eef;
+  padding: 2px 6px;
+  border-radius: 6px;
+}
+
+/* ...existing code... */
+
+@media (max-width: 600px) {
+  .dt-wrapper {
+    flex-direction: column;
+    gap: 14px;
+    margin: 18px 0 0 0;
+    padding: 0 4px;
+  }
+
+  .dt-left, .dt-right {
+    padding: 12px 7px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  }
+
+  .dt-title {
+    font-size: 17px;
+    margin-bottom: 14px;
+  }
+
+  .dt-section {
+    margin-bottom: 13px;
+  }
+
+  .dt-section label {
+    font-size: 13px;
+    margin-bottom: 5px;
+  }
+
+  .dt-section input {
+    font-size: 13px;
+    padding: 7px 10px;
+    border-radius: 7px;
+    margin-bottom: 7px;
+  }
+
+  .dt-inline {
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .dt-btn {
+    font-size: 12px;
+    padding: 8px 10px;
+    border-radius: 7px;
+    gap: 4px;
+  }
+
+  .dt-table-wrap {
+    margin-top: 10px;
+  }
+
+  .dt-table-wrap table {
+    font-size: 12px;
+    min-width: 500px;
+    border-radius: 7px;
+  }
+
+  .dt-table-wrap th,
+  .dt-table-wrap td {
+    padding: 7px 6px;
+    font-size: 12px;
+  }
+
+  .dt-right h3 {
+    font-size: 15px;
+    margin-bottom: 8px;
+  }
+
+  .dt-right p,
+  .dt-right ul {
+    font-size: 12px;
+    margin-bottom: 7px;
+  }
+
+  .dt-right code {
+    font-size: 12px;
+    padding: 1px 4px;
+    border-radius: 4px;
+  }
+  
+}

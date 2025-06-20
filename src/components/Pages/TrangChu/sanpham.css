@@ -1,0 +1,86 @@
+/* Giao diện 4 sản phẩm, các ô to ra, đều nhau, hiển thị đẹp trên mọi màn hình */
+
+.sanpham-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 12px; /* Khoảng cách nhỏ giữa các card */
+  padding: 24px 8px;
+  justify-content: center;
+}
+
+.sanpham-card {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+  width: 260px;              /* Ô to hơn */
+  min-width: 220px;
+  max-width: 300px;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sanpham-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.13);
+}
+
+.sanpham-image {
+  width: 100%;
+  height: 140px;             /* Ảnh cao hơn */
+  object-fit: contain;
+  border-top-left-radius: 18px;
+  border-top-right-radius: 18px;
+  background: #f8f9fa;
+}
+
+.sanpham-title {
+  font-weight: bold;
+  font-size: 1.1rem;
+  padding: 16px 8px 0;
+  color: #222;
+}
+
+.sanpham-button {
+  display: block;
+  color: #e53935;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 12px 0 18px;
+  font-size: 1rem;
+  transition: color 0.2s;
+}
+
+.sanpham-button:hover {
+  color: #b71c1c;
+  text-decoration: underline;
+}
+
+/* Responsive: Khi màn nhỏ, xếp dọc lại */
+@media (max-width: 1100px) {
+  .sanpham-container {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .sanpham-card {
+    width: 45vw;
+    min-width: 180px;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 700px) {
+  .sanpham-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  .sanpham-card {
+    width: 90vw;
+    min-width: 120px;
+    max-width: 100%;
+  }
+}

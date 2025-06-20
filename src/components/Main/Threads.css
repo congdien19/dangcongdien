@@ -1,0 +1,140 @@
+.threads-wrapper {
+  margin: 40px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 0 12px rgba(0,0,0,0.05);
+  font-family: Arial, sans-serif;
+}
+
+.threads-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.threads-header h2 {
+  font-size: 20px;
+  color: #333;
+}
+
+.threads-header-buttons .btn {
+  margin-left: 8px;
+}
+
+.btn {
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn.primary {
+  background-color: #28a745;
+  color: white;
+}
+
+.btn.secondary {
+  background-color: #6c757d;
+  color: white;
+}
+
+.btn.submit {
+  background-color: #007bff;
+  color: white;
+  margin-top: 16px;
+  width: 100%;
+}
+
+.threads-form label {
+  font-weight: bold;
+  display: block;
+  margin-top: 16px;
+}
+
+.threads-form input[type="text"],
+.threads-form input[type="number"],
+.threads-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 6px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-top: 16px;
+}
+
+.server-selection {
+  margin-top: 16px;
+}
+
+.server-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border: 1px dashed #ccc;
+  border-radius: 8px;
+  margin-top: 8px;
+  cursor: pointer;
+}
+
+.server-item.selected {
+  background-color: #f0f8ff;
+  border-color: #007bff;
+}
+
+.server-item input {
+  margin-right: 10px;
+}
+
+.price {
+  margin-left: auto;
+  color: #007bff;
+}
+
+.checkbox {
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+}
+
+.checkbox input {
+  margin-right: 8px;
+}
+
+.summary {
+  background: #f8f9fa;
+  padding: 12px;
+  margin-top: 16px;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.summary span {
+  color: #e55353;
+}
+
+.note {
+  padding: 12px;
+  margin-top: 20px;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.note.info {
+  background-color: #e9f7ef;
+  border-left: 5px solid #28a745;
+}
+
+.note.warning {
+  background-color: #fff3cd;
+  border-left: 5px solid #ffc107;
+}

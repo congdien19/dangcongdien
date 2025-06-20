@@ -1,0 +1,157 @@
+.kw-container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 30px;
+  gap: 30px;
+  background-color: #fff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.kw-image {
+  flex: 1;
+  min-width: 320px;
+}
+
+.kw-image img {
+  width: 100%;
+  border-radius: 12px;
+  object-fit: contain;
+  background: #f9f9f9;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.kw-content {
+  flex: 1;
+  min-width: 320px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.kw-label-premium {
+  background-color: #28a745;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  width: fit-content;
+}
+
+.kw-header h2 {
+  margin: 0;
+  font-size: 24px;
+  color: #202124;
+}
+
+.kw-header p {
+  font-size: 15px;
+  color: #555;
+}
+
+.kw-label-stock {
+  background-color: #e6f4ea;
+  color: #137333;
+  padding: 6px 12px;
+  border-radius: 16px;
+  font-size: 14px;
+  width: fit-content;
+  font-weight: 500;
+}
+
+.kw-plans {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.kw-plan-box {
+  flex: 1;
+  min-width: 180px;
+  border: 2px solid #ccc;
+  border-radius: 12px;
+  padding: 14px 12px;
+  cursor: pointer;
+  background-color: #fdfdfd;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.kw-plan-box:hover {
+  border-color: #007bff;
+  background-color: #f0f8ff;
+}
+
+.kw-plan-box.active {
+  border-color: #007bff;
+  background-color: #e6f0ff;
+}
+
+.kw-plan-duration {
+  font-size: 15px;
+  font-weight: bold;
+  color: #202124;
+  margin-bottom: 6px;
+}
+
+.kw-plan-description {
+  font-size: 13px;
+  color: #666;
+  line-height: 1.4;
+}
+
+.kw-note-box {
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 12px;
+  font-size: 14px;
+  resize: none;
+  min-height: 60px;
+  transition: border-color 0.2s ease;
+}
+
+.kw-note-box:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.kw-footer h3 {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.kw-footer .kw-price {
+  color: #d32f2f;
+}
+
+.kw-pay-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: fit-content;
+}
+
+.kw-pay-button:hover {
+  background-color: #0056b3;
+}
+
+@media screen and (max-width: 768px) {
+  .kw-container {
+    flex-direction: column;
+  }
+
+  .kw-plans {
+    flex-direction: column;
+  }
+
+  .kw-plan-box {
+    width: 100%;
+    max-width: none;
+  }
+}

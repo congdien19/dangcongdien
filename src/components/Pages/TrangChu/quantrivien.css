@@ -1,0 +1,132 @@
+/* Đặt font chữ mặc định cho toàn bộ admin chat */
+/* Đặt font chữ mặc định cho toàn bộ admin chat */
+.admin-chat {
+  flex: 1;
+  padding: 15px;
+  border-radius: 10px;
+  font-family: 'Segoe UI', 'Roboto', Arial, Helvetica, sans-serif; /* Thống nhất font chữ */
+}
+
+.chat-row {
+  margin-bottom: 12px;
+}
+
+.chat-section {
+  background-color: #ffffff;
+  padding: 10px 12px;
+  border-radius: 6px;
+  border: 5px solid #0091ff;
+}
+
+.chat-message {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 8px;
+}
+
+.user-avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 8px;
+  object-fit: cover;
+}
+
+.message-content {
+  flex: 1;
+}
+
+.message-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 4px;
+  font-size: 13px;
+  font-family: inherit; /* Kế thừa font từ .admin-chat */
+}
+
+.user-name {
+  font-weight: 600;
+  color: #1e3a8a;
+  font-family: inherit;
+}
+
+.message-time {
+  color: #6b7280;
+  font-family: inherit;
+}
+
+/* Nâng cấp font chữ to, rõ nét, dễ đọc hơn */
+.message-text {
+  font-size: 16px;
+  color: #22223b;
+  line-height: 1.7;
+  margin: 0;
+  font-family: inherit; /* Kế thừa font từ .admin-chat */
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
+
+.message-text br {
+  margin-bottom: 6px;
+}
+
+.message-text a {
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+  font-family: inherit;
+}
+
+.message-text a:hover {
+  text-decoration: underline;
+}
+
+.message-text .emoji {
+  margin-right: 4px;
+  font-size: 18px;
+  font-family: inherit;
+} 
+
+/* ...existing code... */
+
+@media (max-width: 600px) {
+  .admin-chat {
+    padding: 7px;
+    border-radius: 6px;
+    font-size: 14px;
+  }
+
+  .chat-section {
+    padding: 7px 5px;
+    border-width: 3px;
+    border-radius: 5px;
+  }
+
+  .chat-row {
+    margin-bottom: 8px;
+  }
+
+  .user-avatar {
+    width: 24px;
+    height: 24px;
+    margin-right: 5px;
+  }
+
+  .message-header {
+    font-size: 12px;
+  }
+
+  .message-text {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .message-text a {
+    font-size: 14px;
+  }
+
+  .message-text .emoji {
+    font-size: 16px;
+  }
+}

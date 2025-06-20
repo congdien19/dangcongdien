@@ -1,0 +1,38 @@
+.spchat-container {
+
+  margin: 0 auto;
+  padding: 30px 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  background-color: #fefefe;
+}
+
+.spchat-title {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #1a73e8;
+  margin-bottom: 30px;
+}
+
+.spchat-section {
+  margin-bottom: 30px;
+}
+
+.spchat-section h2 {
+  color: #444;
+  font-size: 1.6rem;
+  margin-bottom: 15px;
+}
+
+.spchat-section h3 {
+  font-size: 1.3rem;
+  color: #1a73e8;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.spchat-section p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}

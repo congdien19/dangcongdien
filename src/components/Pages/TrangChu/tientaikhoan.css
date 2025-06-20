@@ -1,0 +1,120 @@
+/* Giao diện 4 card hình chữ nhật, nằm trên 1 hàng ngang, bo góc lớn, bóng đổ nhẹ, icon tròn nét đứt, căn giữa nội dung, khoảng cách đều đẹp */
+
+.tien-container {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  gap: 24px; /* Khoảng cách giữa các card giữ nguyên */
+  padding: 5px 16px 0 16px; /* Cách header 5px, padding ngang cho đẹp */
+
+  justify-content: center;
+}
+
+.tien-card {
+  flex: 1 1 0;
+  min-width: 0;
+  min-height: 80px;      /* Giảm chiều cao tối thiểu để thành hình chữ nhật */
+  height: 80px;          /* Đặt chiều cao cố định cho card hình chữ nhật */
+  background: #fff;
+  border-radius: 18px;   /* Bo góc lớn */
+  padding: 16px 24px;    /* Padding nhỏ lại cho cân đối hình chữ nhật */
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  display: flex;
+  align-items: center;
+  transition: box-shadow 0.2s, transform 0.2s;
+  font-size: 1.05rem;
+  border: none;
+}
+
+.tien-card:hover {
+  box-shadow: 0 6px 24px rgba(0,0,0,0.12);
+  transform: translateY(-4px) scale(1.01);
+}
+
+.tien-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 2px dashed #bcdcff; /* Màu mặc định, sẽ ghi đè từng card nếu cần */
+  background: #f8fbff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px;
+  flex-shrink: 0;
+}
+
+.tien-card:nth-child(1) .tien-icon {
+  border-color: #6cb6ff;
+  color: #6cb6ff;
+}
+.tien-card:nth-child(2) .tien-icon {
+  border-color: #ffb36c;
+  color: #ffb36c;
+}
+.tien-card:nth-child(3) .tien-icon {
+  border-color: #6cff8f;
+  color: #6cff8f;
+}
+.tien-card:nth-child(4) .tien-icon {
+  border-color: #6cb6ff;
+  color: #6cb6ff;
+}
+
+.tien-icon-inner {
+  font-size: 22px;
+  color: inherit; /* Lấy màu theo .tien-icon */
+}
+
+.tien-info {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: center;
+}
+
+.tien-title {
+  font-size: 1.08rem;
+  font-weight: bold;
+  color: #222;
+  margin-bottom: 4px;
+  line-height: 1.2;
+}
+
+.tien-desc {
+  font-size: 0.95rem;
+  color: #6c757d;
+  line-height: 1.2;
+}
+
+/* Responsive: Khi màn nhỏ, xếp dọc lại */
+@media (max-width: 900px) {
+  .tien-container {
+    flex-direction: column;
+    gap: 16px;
+    padding: 5px 8px 0 8px;
+  }
+  .tien-card {
+    min-height: 60px;
+    height: 60px;
+    padding: 12px 10px;
+  }
+  .tien-icon {
+    width: 32px;
+    height: 32px;
+    margin-right: 12px;
+  }
+}
+/* ...existing code... */
+
+.tien-card:hover .tien-icon {
+  animation: tien-icon-rotate 0.8s linear infinite;
+}
+
+@keyframes tien-icon-rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* ...existing code... */

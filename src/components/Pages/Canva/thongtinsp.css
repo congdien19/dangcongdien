@@ -1,0 +1,52 @@
+.thongtinsp-container {
+  padding: 30px;
+  margin: auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.thongtinsp-container h1 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.thongtinsp-container h2 {
+  color: #007bff;
+  margin-top: 25px;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.thongtinsp-container h3 {
+  color: #0056b3;
+  font-size: 18px;
+  margin-top: 20px;
+  font-weight: 600;
+}
+
+.thongtinsp-container p {
+  font-size: 16px;
+  color: #333;
+  margin: 10px 0;
+}
+
+.thongtinsp-container ul {
+  margin-left: 20px;
+  padding-left: 10px;
+}
+
+.thongtinsp-container li {
+  font-size: 16px;
+  margin-bottom: 8px;
+  color: #444;
+}
+
+.thongtinsp-container strong {
+  color: #000;
+}

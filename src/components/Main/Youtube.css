@@ -1,0 +1,136 @@
+.yt-wrapper {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+  padding: 20px;
+  font-family: 'Segoe UI', sans-serif;
+  flex-wrap: wrap;
+}
+
+.yt-left {
+  flex: 1;
+  min-width: 320px;
+}
+
+.yt-right {
+  width: 350px;
+  background: #f1f1ff;
+  border-radius: 10px;
+  padding: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.yt-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 16px;
+  color: #cc0000;
+  display: flex;
+  align-items: center;
+}
+
+.yt-box {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+.yt-label {
+  font-weight: 600;
+  margin-top: 12px;
+  margin-bottom: 6px;
+  display: block;
+}
+
+.yt-input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+.yt-warning {
+  background-color: #ffc107;
+  padding: 10px;
+  border-radius: 6px;
+  font-size: 14px;
+  margin-bottom: 16px;
+}
+
+.yt-section {
+  margin-bottom: 16px;
+}
+
+.yt-server-option {
+  display: block;
+  margin-bottom: 12px;
+}
+
+.yt-server-text {
+  margin-left: 8px;
+}
+
+.yt-status {
+  color: green;
+  font-weight: bold;
+  margin-left: 10px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.yt-note {
+  background-color: #e6fcff;
+  padding: 8px;
+  margin-top: 6px;
+  border-radius: 6px;
+  font-size: 13px;
+  color: #333;
+}
+
+.yt-button {
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s;
+}
+
+.yt-button:hover {
+  background-color: #218838;
+}
+
+.yt-warning-text {
+  font-size: 13px;
+  color: red;
+  margin-top: 10px;
+}
+
+.yt-video-box h3,
+.yt-note-box h3 {
+  background: #3f51b5;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+  font-size: 16px;
+}
+
+.yt-video {
+  margin-bottom: 16px;
+}
+
+.yt-note-box ul {
+  padding-left: 20px;
+}
+
+.yt-note-box li {
+  margin-bottom: 10px;
+  font-size: 14px;
+}

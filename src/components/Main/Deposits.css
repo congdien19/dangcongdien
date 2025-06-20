@@ -1,0 +1,224 @@
+.deposits-container {
+
+  padding: 32px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.07);
+}
+
+.bank-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 28px;
+  gap: 18px;
+}
+
+.bank-card {
+  flex: 1;
+  background-color: #ffffff;
+  padding: 22px;
+  border-radius: 10px;
+  border: 1px solid #d3e0ea;
+  text-align: center;
+  margin-right: 0;
+  font-size: 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.vietcombank .bank-logo {
+  color: #005bb5;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.mb-bank .bank-logo {
+  color: #ff0000;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.bank-account,
+.bank-name,
+.deposit-amount,
+.note {
+  display: block;
+  font-size: 15px;
+  color: #374151;
+  margin: 8px 0;
+}
+
+.note {
+  color: #6b7280;
+  font-size: 13px;
+}
+
+.deposit-button {
+  width: 100%;
+  padding: 12px;
+  font-size: 15px;
+  color: #ffffff;
+  background-color: #3b82f6;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 14px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.deposit-button:hover {
+  background-color: #2563eb;
+}
+
+.deposit-history {
+  background-color: #ffffff;
+  padding: 22px;
+  border-radius: 10px;
+  border: 1px solid #d3e0ea;
+  margin-top: 24px;
+}
+
+.history-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1e3a8a;
+  margin-bottom: 16px;
+}
+
+.history-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.history-table th,
+.history-table td {
+  padding: 14px 10px;
+  text-align: left;
+  font-size: 15px;
+  color: #374151;
+  border-bottom: 1px solid #e0e8f0;
+}
+
+.history-table th {
+  background-color: #f3f4f6;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.history-table td {
+  vertical-align: middle;
+}
+
+.action-button {
+  padding: 7px 14px;
+  font-size: 13px;
+  color: #ffffff;
+  background-color: #10b981;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.action-button:hover {
+  background-color: #059669;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .deposits-container {
+    padding: 12px;
+  }
+  .bank-info {
+    flex-direction: column;
+    gap: 12px;
+  }
+  .bank-card {
+    padding: 14px;
+    font-size: 15px;
+  }
+  .deposit-history {
+    padding: 12px;
+  }
+  .history-title {
+    font-size: 15px;
+  }
+  .history-table th,
+  .history-table td {
+    padding: 8px 4px;
+    font-size: 13px;
+  }
+}
+.qr-modal {
+  position: fixed;
+  z-index: 1000;
+  left: 0; top: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.qr-modal-content {
+  background: #fff;
+  padding: 32px 24px 24px 24px;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+  text-align: center;
+  position: relative;
+  min-width: 300px;
+  max-width: 90vw;
+}
+
+.qr-modal-close {
+  position: absolute;
+  top: 12px;
+  right: 18px;
+  font-size: 28px;
+  color: #d7263d;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.qr-image {
+  margin: 18px 0 10px 0;
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+}
+.qr-icon {
+  font-size: 18px;
+  margin-right: 6px;
+  vertical-align: middle;
+}
+
+/* ...existing code... */
+
+@media (max-width: 600px) {
+  .deposit-history {
+    padding: 7px 2px;
+    border-radius: 7px;
+    margin-top: 10px;
+    background: #fff;
+    overflow-x: auto;
+  }
+
+  .history-title {
+    font-size: 13px;
+    margin-bottom: 7px;
+    text-align: center;
+  }
+
+  .history-table {
+    font-size: 11px;
+    min-width: 600px; /* Cho phép scroll ngang nếu bảng rộng */
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .history-table th,
+  .history-table td {
+    padding: 5px 3px;
+    font-size: 11px;
+  }
+}

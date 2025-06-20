@@ -1,0 +1,64 @@
+/* Facebook.css */
+
+.facebook-container {
+  max-width: 720px;
+  margin: 40px auto;
+  padding: 24px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+}
+
+.input-margin {
+  margin-top: 16px;
+}
+
+.warning-box {
+  margin-top: 32px;
+}
+
+.ant-radio-wrapper {
+  margin-bottom: 12px;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.ant-alert-info {
+  background-color: #e6f7ff;
+  border-color: #91d5ff;
+}
+
+.ant-alert-error {
+  background-color: #fff2f0;
+  border-color: #ffccc7;
+}
+
+.ant-btn-primary {
+  width: 100%;
+  font-weight: 500;
+  padding: 10px 0;
+  font-size: 16px;
+}
+
+.ant-input,
+.ant-input-number,
+.ant-textarea {
+  border-radius: 6px;
+}
+
+/* Responsive layout */
+@media (max-width: 576px) {
+  .facebook-container {
+    padding: 16px;
+  }
+
+  .ant-btn-primary {
+    font-size: 14px;
+    padding: 8px 0;
+  }
+
+  .ant-radio-wrapper {
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,91 @@
+/* ...existing code... */
+
+.app-container {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Sidebar cố định, không di chuyển khi cuộn nội dung */
+.sidebar-menu {
+  height: calc(100vh - 55px); /* Adjusted height to account for header */
+  position: sticky;
+  top: 55px; /* Start below the header */
+  left: 0;
+  overflow-y: auto;
+  background: #fff;
+  border-right: 1px solid #eee;
+  flex-shrink: 0;
+  z-index: 10;
+  scrollbar-width: thin;
+  scrollbar-color: #ccc #f0f0f0;
+}
+
+.sidebar-menu::-webkit-scrollbar {
+  width: 8px;
+}
+
+.sidebar-menu::-webkit-scrollbar-track {
+  background: #f0f0f0;
+}
+
+.sidebar-menu::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 10px;
+  border: 2px solid #f0f0f0;
+}
+
+.content-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  overflow-x: auto;
+  background-color: #f5f7fa;
+  min-height: 0;
+  scrollbar-width: thin;
+  scrollbar-color: #ccc #f0f0f0;
+}
+
+.content-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.content-container::-webkit-scrollbar-track {
+  background: #f0f0f0;
+}
+
+.content-container::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 10px;
+  border: 2px solid #f0f0f0;
+}
+
+/* Thêm vào App.css hoặc index.css */
+body.dark-theme {
+  background: #18191a;
+  color: #f1f1f1;
+}
+
+body.dark-theme .page-title,
+body.dark-theme .home-container,
+body.dark-theme .sidebar-menu,
+body.dark-theme .auth-container {
+  background: #242526 !important;
+  color: #f1f1f1 !important;
+}
+
+/* Thêm các selector khác nếu muốn đổi màu nhiều thành phần hơn */
+/* --- Giao diện mặc định cho desktop --- */
+.container {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.left, .right {
+  flex: 1;
+  padding: 20px;
+  background: #eee;
+}

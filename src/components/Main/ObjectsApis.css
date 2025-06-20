@@ -1,0 +1,487 @@
+/* ========================================
+   OBJECTS APIS COMPONENT STYLES
+   ======================================== */
+
+/* Main container */
+.objects-apis-container {
+    min-height: 100vh;
+    background: #f8fafc;
+    padding: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Wrapper for two-column layout */
+.apis-wrapper {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 320px; /* Reduced from 400px to 320px */
+    gap: 25px; /* Reduced from 30px */
+    min-height: calc(100vh - 40px);
+}
+
+/* ========================================
+   LEFT PANEL - API CONFIGURATION
+   ======================================== */
+
+.api-config-panel {
+    background: white;
+    border-radius: 16px;
+    padding: 30px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    height: fit-content;
+}
+
+/* Config header */
+.config-header {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #f1f5f9;
+}
+
+.config-title {
+    color: #1e293b;
+    font-size: 28px;
+    font-weight: 700;
+    margin: 0 0 8px 0;
+}
+
+.config-subtitle {
+    color: #64748b;
+    font-size: 16px;
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* Section titles */
+.section-title {
+    color: #334155;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0 0 16px 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.section-title::before {
+    content: '';
+    width: 4px;
+    height: 20px;
+    background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+    border-radius: 2px;
+}
+
+/* Current API section */
+.current-api-section {
+    margin-bottom: 40px;
+}
+
+.api-info-card {
+    background: #f8fafc;
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 20px;
+}
+
+.api-key-display {
+    margin-bottom: 16px;
+    padding: 12px;
+    background: #1e293b;
+    border-radius: 8px;
+    color: white;
+}
+
+.api-key-label {
+    font-size: 12px;
+    color: #94a3b8;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-right: 8px;
+}
+
+.api-key-value {
+    font-family: 'Courier New', monospace;
+    font-size: 14px;
+    color: #22d3ee;
+    word-break: break-all;
+}
+
+/* API stats */
+.api-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.stat-label {
+    font-size: 12px;
+    color: #64748b;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.stat-value {
+    font-size: 14px;
+    color: #1e293b;
+    font-weight: 600;
+}
+
+.status-active {
+    color: #10b981 !important;
+}
+
+/* Test API button */
+.test-api-btn {
+    width: 100%;
+    padding: 10px 16px;
+    background: #f1f5f9;
+    color: #475569;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.test-api-btn:hover:not(:disabled) {
+    background: #e2e8f0;
+    border-color: #cbd5e1;
+}
+
+.test-api-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* Update API section */
+.update-api-section {
+    /* No additional styles needed */
+}
+
+/* Form styling */
+.api-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-label {
+    color: #374151;
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0;
+}
+
+/* API input textarea */
+.api-input {
+    width: 100%;
+    padding: 16px;
+    border: 2px solid #e5e7eb;
+    border-radius: 12px;
+    font-size: 14px;
+    font-family: 'Courier New', monospace;
+    transition: all 0.3s ease;
+    background: #f9fafb;
+    color: #1f2937;
+    resize: vertical;
+    min-height: 120px;
+}
+
+.api-input:focus {
+    outline: none;
+    border-color: #3b82f6;
+    background: white;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.api-input:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* Submit button */
+.submit-button {
+    background: linear-gradient(135deg, #f59e0b, #d97706);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    padding: 16px 24px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.submit-button:hover:not(:disabled) {
+    background: linear-gradient(135deg, #d97706, #b45309);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(245, 158, 11, 0.3);
+}
+
+.submit-button.success {
+    background: linear-gradient(135deg, #10b981, #059669);
+}
+
+.submit-button.loading {
+    background: linear-gradient(135deg, #9ca3af, #6b7280);
+}
+
+.submit-button:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* Loading spinner */
+.loading-spinner {
+    width: 20px;
+    height: 20px;
+    border: 2px solid transparent;
+    border-top: 2px solid white;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+.success-icon {
+    font-size: 18px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* ========================================
+   RIGHT PANEL - COMPACT DOCUMENTATION
+   ======================================== */
+
+.api-docs-panel {
+    background: white;
+    border-radius: 12px; /* Reduced from 16px */
+    padding: 18px; /* Reduced from 25px */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    height: fit-content;
+    position: sticky;
+    top: 20px;
+}
+
+/* Docs header */
+.docs-header {
+    margin-bottom: 18px; /* Reduced from 25px */
+    padding-bottom: 12px; /* Reduced from 15px */
+    border-bottom: 1px solid #f1f5f9; /* Reduced from 2px */
+}
+
+.docs-title {
+    color: #1e293b;
+    font-size: 18px; /* Reduced from 20px */
+    font-weight: 700;
+    margin: 0;
+}
+
+/* Docs content */
+.docs-content {
+    display: flex;
+    flex-direction: column;
+    gap: 14px; /* Reduced from 20px */
+}
+
+.docs-section {
+    padding: 12px; /* Reduced from 16px */
+    background: #f8fafc;
+    border-radius: 8px; /* Reduced from 10px */
+    border-left: 3px solid #3b82f6; /* Reduced from 4px */
+}
+
+.docs-section-title {
+    color: #1e293b;
+    font-size: 14px; /* Reduced from 16px */
+    font-weight: 600;
+    margin: 0 0 8px 0; /* Reduced from 12px */
+}
+
+.docs-text {
+    color: #475569;
+    font-size: 12px; /* Reduced from 14px */
+    line-height: 1.5; /* Reduced from 1.6 */
+}
+
+.docs-text p {
+    margin: 0 0 6px 0; /* Reduced from 8px */
+}
+
+.docs-text p:last-child {
+    margin-bottom: 0;
+}
+
+/* Compact list styling for better space usage */
+.docs-text ul {
+    margin: 0;
+    padding-left: 16px;
+    list-style-type: disc;
+}
+
+.docs-text li {
+    margin-bottom: 4px;
+    font-size: 12px;
+    line-height: 1.4;
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
+
+/* Tablet adjustments */
+@media (max-width: 1024px) {
+    .apis-wrapper {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .api-docs-panel {
+        position: static;
+        order: 2;
+        padding: 20px; /* Restore normal padding on mobile */
+    }
+    
+    .api-config-panel {
+        order: 1;
+    }
+    
+    .docs-title {
+        font-size: 20px; /* Restore larger size on mobile */
+    }
+    
+    .docs-section-title {
+        font-size: 16px; /* Restore larger size on mobile */
+    }
+    
+    .docs-text {
+        font-size: 14px; /* Restore larger size on mobile */
+    }
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    .objects-apis-container {
+        padding: 16px;
+    }
+    
+    .api-config-panel,
+    .api-docs-panel {
+        padding: 20px;
+    }
+    
+    .config-title {
+        font-size: 24px;
+    }
+    
+    .docs-title {
+        font-size: 18px;
+    }
+    
+    .api-stats {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Small mobile adjustments */
+@media (max-width: 480px) {
+    .objects-apis-container {
+        padding: 12px;
+    }
+    
+    .api-config-panel,
+    .api-docs-panel {
+        padding: 16px;
+    }
+    
+    .config-title {
+        font-size: 22px;
+    }
+    
+    .api-input {
+        padding: 14px;
+        font-size: 13px;
+    }
+    
+    .submit-button {
+        padding: 14px 20px;
+        font-size: 15px;
+    }
+}
+
+/* ========================================
+   ACCESSIBILITY ENHANCEMENTS
+   ======================================== */
+
+/* Focus states */
+.api-input:focus,
+.submit-button:focus,
+.test-api-btn:focus {
+    outline: 2px solid #3b82f6;
+    outline-offset: 2px;
+}
+
+/* High contrast mode */
+@media (prefers-contrast: high) {
+    .api-input {
+        border-width: 3px;
+    }
+    
+    .submit-button {
+        border: 2px solid #b45309;
+    }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    .api-input,
+    .submit-button,
+    .test-api-btn {
+        transition: none;
+    }
+    
+    .loading-spinner {
+        animation: none;
+    }
+}
+
+/* Print styles */
+@media print {
+    .objects-apis-container {
+        background: white;
+        min-height: auto;
+    }
+    
+    .api-config-panel,
+    .api-docs-panel {
+        box-shadow: none;
+        border: 1px solid #e5e7eb;
+    }
+    
+    .submit-button,
+    .test-api-btn {
+        display: none;
+    }
+}

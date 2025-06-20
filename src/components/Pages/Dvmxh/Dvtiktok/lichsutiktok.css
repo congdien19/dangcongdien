@@ -1,0 +1,153 @@
+.lichsu-container {
+  padding: 60px;
+  font-family: 'Roboto', Arial, sans-serif;
+  background-color: #ffffff; /* Changed to white for a cleaner look */
+  color: #333;
+  border-radius: 8px; /* Added rounded corners */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Added shadow for depth */
+}
+
+.lichsu-header {
+  font-weight: bold;
+  font-size: 22px; /* Slightly larger font size */
+  margin-bottom: 20px;
+  color: #222;
+  border-bottom: 2px solid #f0f0f0; /* Added bottom border for separation */
+  padding-bottom: 10px;
+}
+
+.lichsu-controls {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+  flex-wrap: wrap; /* Allow controls to wrap for smaller screens */
+}
+
+.input-ma {
+  flex: 1;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  transition: border-color 0.3s;
+}
+
+.input-ma:focus {
+  border-color: #5ec0ed;
+}
+
+.btn-lichsu {
+  padding: 10px 15px;
+  background-color: #5ec0ed;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn-lichsu:hover {
+  background-color: #4da8d8;
+  transform: translateY(-2px);
+}
+
+.lichsu-filter {
+  margin-bottom: 20px;
+}
+
+.filter-status {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.filter-status button {
+  padding: 8px 14px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  background-color: white;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.filter-status button.active {
+  background-color: #5ec0ed;
+  color: white;
+  border-color: #5ec0ed;
+}
+
+.filter-status button:hover {
+  background-color: #e0f4fc;
+}
+
+.filter-inputs {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.filter-inputs input,
+.filter-inputs select {
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  transition: border-color 0.3s;
+}
+
+.filter-inputs input:focus,
+.filter-inputs select:focus {
+  border-color: #5ec0ed;
+}
+
+.btn-search,
+.btn-filter {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  background-color: #5ec0ed;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn-search:hover,
+.btn-filter:hover {
+  background-color: #4da8d8;
+  transform: translateY(-2px);
+}
+
+.lichsu-table {
+  text-align: center;
+  margin-top: 40px;
+  border-collapse: collapse; /* Collapsed borders for table */
+  width: 100%; /* Full width table */
+}
+
+.lichsu-table th,
+.lichsu-table td {
+  padding: 12px;
+  border: 1px solid #f0f0f0; /* Light border for table cells */
+}
+
+.no-orders {
+  font-size: 16px;
+  margin-bottom: 20px;
+  color: #666;
+}
+
+.btn-taodon {
+  padding: 10px 18px;
+  background-color: #5ec0ed;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn-taodon:hover {
+  background-color: #4da8d8;
+  transform: translateY(-2px);
+}
