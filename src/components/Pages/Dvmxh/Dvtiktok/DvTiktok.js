@@ -1,173 +1,213 @@
 import React, { useState } from 'react';
-import {
-  Input,
-  Radio,
-  Alert,
-  Button,
-  Checkbox,
-  Typography,
-  Badge,
-  Card,
-  Row,
-  Col,
-  Divider
-} from 'antd';
 import { FaTiktok } from 'react-icons/fa';
 import './DvTiktok.css';
 
-const { TextArea } = Input;
-const { Title, Text } = Typography;
-
 const DvTiktok = () => {
-  const [selectedOption, setSelectedOption] = useState(null);
-  const [amount, setAmount] = useState(100);
-  const [moneyPerView, setMoneyPerView] = useState(0);
+  const [link, setLink] = useState('');
+  const [selectedServer, setSelectedServer] = useState('MC-1');
+  const [quantity, setQuantity] = useState(100);
+  const [pricePerView, setPricePerView] = useState(0.004);
   const [note, setNote] = useState('');
+  const [multiOrder, setMultiOrder] = useState(false);
   const [schedule, setSchedule] = useState(false);
-  const [repeat, setRepeat] = useState(false);
+  const [autoRepeat, setAutoRepeat] = useState(false);
 
-  const options = [
+  const serverOptions = [
     {
-      label: 'Tăng Lượt Xem Video Tiktok ~ Lên Nhanh ~ Giá Siêu Rẻ ~ Tài Nguyên Việt Nam 🔥🔥 - 0.004đ/1 view',
-      value: 'MC-1',
+      id: 'MC-1',
+      name: 'MC-1',
       price: 0.004,
+      description: 'Tăng Lượt Theo Dõi TikTok ~ Lên Nhanh ~ Giá Siêu Rẻ ~ Tài Nguyên Việt Nam 🔥🔥 - 0.004đ/1 view',
+      badge: 'green'
     },
     {
-      label: 'Tăng Lượt Xem Video Tiktok ~ Lên Nhanh ~ Tài Nguyên Việt Nam 🔥 - 0.01đ/1 view',
-      value: 'MC-2',
+      id: 'MC-2',
+      name: 'MC-2',
       price: 0.01,
+      description: 'Tăng Lượt Tym Tiktok ~ Lên Nhanh ~ Tài Nguyên Việt Nam 🔥 - 0.01đ/1 view',
+      badge: 'green'
     },
     {
-      label: 'Tăng Lượt Xem Video Tiktok ~ Tỉ Lệ Tụt Thấp ~ Tài Nguyên Việt Nam 🔥 - 0.017đ/1 view',
-      value: 'MC-3',
+      id: 'MC-3',
+      name: 'MC-3',
       price: 0.017,
+      description: 'Tăng Lượt Mắt Live Tiktok ~ Tỉ Lệ Tụt Thấp ~ Tài Nguyên Việt Nam 🔥 - 0.017đ/1 view',
+      badge: 'green'
     },
     {
-      label: 'Tăng Lượt Xem Video Tiktok ~ Xu Hướng ~ Xem Video Trong 30 Giây ~ Tài Nguyên Việt Nam 🔥🔥🔥 - 4.089đ/1 view',
-      value: 'MC-4',
+      id: 'MC-4',
+      name: 'MC-4',
       price: 4.089,
+      description: 'Tăng Lượt Bình Luận Tiktok ~ Xu Hướng ~ Lượt Tăng Nhanh ~ Tài Nguyên Việt Nam 🔥🔥🔥 - 4.089đ/1 view',
+      badge: 'red'
     },
     {
-      label: 'Tăng Lượt Xem Video Bắt Đầu Nhanh ~ Tài Nguyên Việt Nam - 2.5đ/1 view',
-      value: 'MC-5',
+      id: 'MC-5',
+      name: 'MC-5',
       price: 2.5,
-    },
+      description: 'Tăng Lượt Xem Video Bắt Đầu Nhanh ~ Tài Nguyên Việt Nam - 2.5đ/1 view',
+      badge: 'blue'
+    }
   ];
 
-  const handleOptionChange = (value) => {
-    setSelectedOption(value);
-    const selected = options.find(opt => opt.value === value);
-    if (selected) {
-      setMoneyPerView(selected.price);
-    }
+  const total = quantity * pricePerView;
+
+  const handleServerChange = (server) => {
+    setSelectedServer(server.id);
+    setPricePerView(server.price);
   };
 
   return (
-    <div className="tiktok-full-container">
-      <Card bordered={false} style={{ padding: '20px' }}>
-        <Title level={4} style={{ textAlign: 'center', marginBottom: 30 }}>
-          <FaTiktok style={{ marginRight: 8, color: '#000' }} />
-          TIKTOK TĂNG LƯỢT XEM VIDEO
-        </Title>
+    <div className="dvtiktok-container">
+      {/* Header */}
+      <div className="dvtiktok-header">
+        <div className="breadcrumb">
+          <span className="tiktok-icon"><FaTiktok /></span>
+          TIKTOK &gt;&gt; TĂNG LƯỢT XEM VIDEO
+        </div>
+        <div className="header-actions">
+          <button className="btn-create-order">KHỞI TẠO ĐƠN HÀNG</button>
+          <button className="btn-history">🔍 LỊCH SỬ ĐƠN HÀNG</button>
+        </div>
+      </div>
 
-        <Row gutter={[16, 16]}>
-          <Col span={24}>
-            <Input placeholder="Nhập Link Video cần mua" size="large" />
-          </Col>
+      <div className="dvtiktok-main-content">
+        {/* Left Column - Form */}
+        <div className="dvtiktok-form-column">
+          <div className="form-section">
+            <div className="form-group">
+              <label>Nhập Link Video:</label>
+              <input 
+                type="text" 
+                value={link} 
+                onChange={e => setLink(e.target.value)} 
+                placeholder="Nhập Link Video cần mua" 
+                className="form-input"
+              />
+            </div>
 
-          <Col span={24}>
-            <Checkbox>Mua Nhiều Đơn Cùng Lúc ~ Chọn Trước Khi Nhập Danh Sách Link</Checkbox>
-          </Col>
+            <div className="checkbox-wrapper">
+              <input 
+                type="checkbox" 
+                id="multi-order"
+                checked={multiOrder}
+                onChange={e => setMultiOrder(e.target.checked)}
+              />
+              <label htmlFor="multi-order">Mua Nhiều Đơn Cùng Lúc ~ Chọn Trước Khi Nhập Danh Sách Link</label>
+            </div>
 
-          <Col span={24}>
-            <Radio.Group
-              onChange={(e) => handleOptionChange(e.target.value)}
-              value={selectedOption}
-              style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}
-            >
-              {options.map((opt) => (
-                <Radio value={opt.value} key={opt.value}>
-                  <Badge color="green" text={opt.label} />
-                </Radio>
+            <div className="server-section">
+              <h4>Chọn máy chủ:</h4>
+              {serverOptions.map((server) => (
+                <div key={server.id} className="server-option">
+                  <label className="server-label">
+                    <input 
+                      type="radio" 
+                      name="server" 
+                      checked={selectedServer === server.id} 
+                      onChange={() => handleServerChange(server)}
+                    />
+                    <span className={`server-badge ${server.badge}`}>{server.name}</span>
+                    <span className="server-description">{server.description}</span>
+                  </label>
+                </div>
               ))}
-            </Radio.Group>
-          </Col>
+            </div>
 
-          <Col xs={24} sm={12}>
-            <Input
-              type="number"
-              placeholder="Số lượng"
-              size="large"
-              value={amount}
-              onChange={(e) => setAmount(Number(e.target.value))}
-            />
-          </Col>
+            <div className="form-row">
+              <div className="form-group">
+                <label>Số lượng: (100 ~ 1000000)</label>
+                <input 
+                  type="number" 
+                  value={quantity} 
+                  onChange={e => setQuantity(Number(e.target.value))}
+                  className="form-input"
+                  min="100"
+                  max="1000000"
+                />
+              </div>
+              <div className="form-group">
+                <label>Số tiền mỗi tương tác:</label>
+                <input 
+                  type="number" 
+                  value={pricePerView} 
+                  className="form-input"
+                  readOnly
+                  step="0.001"
+                />
+              </div>
+            </div>
 
-          <Col xs={24} sm={12}>
-            <Input
-              type="number"
-              placeholder="Số tiền mỗi tương tác"
-              size="large"
-              value={moneyPerView}
-              onChange={(e) => setMoneyPerView(Number(e.target.value))}
-            />
-          </Col>
+            <div className="form-group">
+              <label>Ghi chú:</label>
+              <textarea 
+                value={note} 
+                onChange={e => setNote(e.target.value)} 
+                placeholder="Ghi chú nếu cần"
+                className="form-textarea"
+              />
+            </div>
 
-          <Col span={24}>
-            <TextArea
-              rows={4}
-              placeholder="Ghi chú nếu cần"
-              value={note}
-              onChange={(e) => setNote(e.target.value)}
-            />
-          </Col>
+            <div className="checkbox-wrapper">
+              <input 
+                type="checkbox" 
+                id="schedule"
+                checked={schedule}
+                onChange={e => setSchedule(e.target.checked)}
+              />
+              <label htmlFor="schedule">
+                Đặt lịch chạy Múi giờ: +07:00 ~ Kiểm tra quá trình ở mục tiến trình đơn hàng
+              </label>
+            </div>
 
-          <Col span={24}>
-            <Checkbox checked={schedule} onChange={() => setSchedule(!schedule)}>
-              Đặt lịch chạy Múi giờ: +07:00
-            </Checkbox>
-            <br />
-            <Checkbox checked={repeat} onChange={() => setRepeat(!repeat)}>
-              Đặt hàng lặp lại. Tự động đặt lại đơn hàng sau khi đơn hàng này HOÀN THÀNH
-            </Checkbox>
-          </Col>
+            <div className="checkbox-wrapper">
+              <input 
+                type="checkbox" 
+                id="auto-repeat"
+                checked={autoRepeat}
+                onChange={e => setAutoRepeat(e.target.checked)}
+              />
+              <label htmlFor="auto-repeat">
+                Đặt hàng lặp lại. Tự động đặt lại đơn hàng sau khi đơn hàng này HOÀN THÀNH
+              </label>
+            </div>
 
-          <Col span={24}>
-            <Alert
-              message={
-                <Text strong style={{ fontSize: 16 }}>
-                  Tổng thanh toán: {(amount * moneyPerView).toLocaleString()}đ
-                </Text>
-              }
-              description={`Bạn sẽ tăng ${amount} số lượng với giá ${(amount * moneyPerView).toLocaleString()}đ`}
-              type="info"
-              showIcon
-            />
-          </Col>
+            <div className="total-section">
+              <div className="total-info">
+                <p>Tổng thanh toán: <span className="total-amount">{total.toLocaleString()} đ</span></p>
+                <p>Bạn sẽ tăng <strong>{quantity.toLocaleString()}</strong> số lượng với giá <strong>{total.toLocaleString()} đ</strong></p>
+              </div>
+              <button className="btn-create-order-main">Tạo đơn hàng</button>
+            </div>
+          </div>
+        </div>
 
-          <Col span={24} style={{ textAlign: 'center' }}>
-            <Button type="primary" size="large">Tạo Đơn Hàng</Button>
-          </Col>
+        {/* Right Column - Info Cards */}
+        <div className="dvtiktok-info-column">
+          <div className="info-card blue-card">
+            <h4>Hướng Dẫn & Ghi Chú:</h4>
+            <ul>
+              <li>Các máy chủ thuộc dịch vụ việt nam đều sử dụng nguồn tài khoản việt nam</li>
+              <li>Nếu máy chủ không đặt được vui lòng nhấp chat hỗ trợ</li>
+              <li>Thời gian bắt đầu: 0-30 phút</li>
+              <li>Tốc độ: 1000-5000/ngày</li>
+              <li>Dịch vụ chạy 24/7 không nghỉ</li>
+            </ul>
+          </div>
 
-          <Col span={24}>
-            <Divider />
-            <Alert
-              className="warning-box"
-              message="LƯU Ý!"
-              description={
-                <ul style={{ paddingLeft: 20 }}>
-                  <li>1 ID không mua 2 đơn cùng lúc trong hệ thống !</li>
-                  <li>Nghiêm cấm buff các nội dung vi phạm pháp luật, chính trị...</li>
-                  <li>Nếu có tình trạng hệ thống bên không chạy, nếu có tình trạng hụt, thì số lượng giữa 2 bên sẽ không được xử lí.</li>
-                  <li>Chúng tôi sẽ không thể hoàn tiền nếu sai link hoặc sai ID.</li>
-                </ul>
-              }
-              type="error"
-              showIcon
-            />
-          </Col>
-        </Row>
-      </Card>
+          <div className="info-card red-card">
+            <h4>LƯU Ý!</h4>
+            <ul>
+              <li>1 ID không mua 2 đơn cùng lúc trong hệ thống !</li>
+              <li>Nghiêm cấm buff các nội dung vi phạm pháp luật, chính trị, đồi trụy...</li>
+              <li>Nếu có tình trạng hệ thống bên không chạy, nếu có tình trạng hụt, thì số lượng giữa 2 bên sẽ không được xử lí.</li>
+              <li>Chúng tôi sẽ không thể hoàn tiền nếu sai link hoặc sai ID.</li>
+              <li>Vui lòng kiểm tra kỹ link trước khi đặt đơn</li>
+              <li>Đảm bảo video không ở chế độ riêng tư</li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
